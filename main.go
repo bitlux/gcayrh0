@@ -29,7 +29,7 @@ func extractWords(filename string) ([][]string, error) {
 
 func hash(data string) string {
 	sum := sha256.Sum256([]byte(data))
-	return fmt.Sprintf("%x", sum)
+	return fmt.Sprintf("%x", sum[0:4])
 }
 
 func main() {
